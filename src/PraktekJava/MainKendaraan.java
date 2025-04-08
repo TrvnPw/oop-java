@@ -4,14 +4,16 @@
  */
 package PraktekJava;
 
+import Pembantu.Helper;
 import PraktekJava.Kendaraan;
+import java.util.Date;
 import java.util.Scanner;
 
 /**
  *
  * @author user
  */
-public class MainKendaraan {
+public class MainKendaraan extends Helper{
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in); 
@@ -28,7 +30,7 @@ public class MainKendaraan {
         int jumlahPintu = mobil.getJumlahPintu();
         String bahanBakar = mobil.getBahanBakar();
         String isElectricString; 
-        
+        Date tanggal = new Date();
                 
         if (!mobil.getIsElectric()){
             isElectricString = "Mobil listrik";

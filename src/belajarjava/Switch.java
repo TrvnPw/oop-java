@@ -24,7 +24,7 @@ public class Switch {
                 break;
             case 2:
                 namaBarang = "Alat Elektronik";
-//                break;
+                break;
             case 3:
                 namaBarang = "Alat Alat Masak";
                 break;
