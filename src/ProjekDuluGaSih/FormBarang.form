@@ -39,7 +39,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel1" max="32767" attributes="0"/>
+              <Component id="jPanel1" pref="351" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -89,7 +89,7 @@
                               <Group type="102" alignment="0" attributes="1">
                                   <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="tfHargaBarang" pref="71" max="32767" attributes="0"/>
+                                  <Component id="tfHargaBarang" pref="83" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -98,8 +98,8 @@
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="tfTotalBayar" alignment="0" pref="71" max="32767" attributes="0"/>
-                                      <Component id="tfJumlahBeli" alignment="0" pref="71" max="32767" attributes="0"/>
+                                      <Component id="tfTotalBayar" alignment="0" pref="83" max="32767" attributes="0"/>
+                                      <Component id="tfJumlahBeli" alignment="0" pref="83" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -109,8 +109,8 @@
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="tfUangBayar" alignment="0" pref="71" max="32767" attributes="0"/>
-                                      <Component id="tfUangKembali" alignment="0" pref="71" max="32767" attributes="0"/>
+                                      <Component id="tfUangBayar" alignment="0" pref="83" max="32767" attributes="0"/>
+                                      <Component id="tfUangKembali" alignment="0" pref="83" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>

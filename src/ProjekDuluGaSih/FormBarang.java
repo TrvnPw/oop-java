@@ -10,9 +10,11 @@
  */
 package ProjekDuluGaSih;
 
+import Pembantu.Helper;
 import java.awt.event.KeyEvent;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+import static Pembantu.Helper.*;
 
 /**
  *
@@ -21,6 +23,7 @@ import javax.swing.JOptionPane;
 public class FormBarang extends javax.swing.JFrame {
 
     Barang barang = new Barang();
+    
 
     /** Creates new form FormBarang */
     public FormBarang() {
@@ -188,23 +191,23 @@ public class FormBarang extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel7)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tfHargaBarang, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE))
+                                .addComponent(tfHargaBarang, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel6)
                                     .addComponent(jLabel5))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tfTotalBayar, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
-                                    .addComponent(tfJumlahBeli, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)))
+                                    .addComponent(tfTotalBayar, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                                    .addComponent(tfJumlahBeli, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel8)
                                     .addComponent(jLabel3))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tfUangBayar, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
-                                    .addComponent(tfUangKembali, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)))))
+                                    .addComponent(tfUangBayar, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
+                                    .addComponent(tfUangKembali, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel9))
@@ -274,7 +277,7 @@ public class FormBarang extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -289,7 +292,7 @@ private void cbKodeBarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-
     if (cb.getSelectedItem() != null) {
         barang.setSeleksiKodeBarang();        
         tfNamaBarang.setText(barang.getNamaBarang());
-        tfHargaBarang.setText(Double.toString(barang.getHargaBarang()));
+        tfHargaBarang.setText(formatRupiah(barang.getHargaBarang()));
         aktif();
         tfJumlahBeli.grabFocus();
     }
@@ -306,7 +309,7 @@ private void tfJumlahBeliKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:ev
 // TODO add your handling code here:
     if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
         barang.setJumlahBarang(Integer.parseInt(tfJumlahBeli.getText()));
-        tfTotalBayar.setText(Double.toString(barang.getTotalBayar()));
+        tfTotalBayar.setText(formatRupiah(barang.getTotalBayar()));
         tfUangBayar.grabFocus();
     }
 }//GEN-LAST:event_tfJumlahBeliKeyPressed
@@ -315,9 +318,9 @@ private void tfUangBayarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:eve
 // TODO add your handling code here:
     if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
         barang.setUangBayar(Double.parseDouble(tfUangBayar.getText()));
-        System.out.println(barang.getUangBayar());
+        
 
-        tfUangKembali.setText(Double.toString(barang.getUangKembali()));
+        tfUangKembali.setText(formatRupiah(barang.getUangKembali()));
         if (barang.getUangBayar() < barang.getTotalBayar()) {
             JOptionPane.showMessageDialog(null, "Pembayaran kurang!!",
                     "Warning", JOptionPane.OK_OPTION);

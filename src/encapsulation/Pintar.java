@@ -15,5 +15,6 @@ public class Pintar {
         Belajar panggil = new Belajar();
         System.out.println("Panggil X :"+panggil.x);
         //System.out.println("Panggil Y :"+panggil.y);
+        
     }
 }

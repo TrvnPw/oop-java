@@ -10,6 +10,5 @@ package encapsulation;
  */
 public class Belajar {
     public String x = "Pintar";
-    private String y = "Java";
-    
+    private String y = "Java";        
 }

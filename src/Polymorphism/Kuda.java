@@ -4,6 +4,8 @@
  */
 package Polymorphism;
 
+import Polymorphism.Hewan;
+
 /**
  *
  * @author user
